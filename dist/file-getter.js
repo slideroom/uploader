@@ -58,7 +58,7 @@ var FileGetter = (function () {
         value: function getFiles() {
             var multiple = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
 
-            return __awaiter(this, void 0, Promise, regeneratorRuntime.mark(function callee$2$0() {
+            return __awaiter(this, void 0, void 0, regeneratorRuntime.mark(function callee$2$0() {
                 var element, resolver, returnPromise, event, changeListener;
                 return regeneratorRuntime.wrap(function callee$2$0$(context$3$0) {
                     while (1) switch (context$3$0.prev = context$3$0.next) {

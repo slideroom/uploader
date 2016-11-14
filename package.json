@@ -1,22 +1,23 @@
 {
   "name": "uploader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "build": "./node_modules/.bin/gulp build"
   },
   "author": "",
+  "typings": "./dist/uploader.d.ts",
   "license": "ISC",
   "devDependencies": {
     "del": "^2.2.1",
-    "dts-generator": "^1.7.0",
+    "dts-generator": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^5.2.1",
     "gulp-replace": "^0.5.4",
     "gulp-typescript": "^2.13.6",
     "run-sequence": "^1.2.1",
-    "typescript": "1.8.9",
+    "typescript": "^2.0.9",
     "vinyl-paths": "^2.1.0"
   }
 }
