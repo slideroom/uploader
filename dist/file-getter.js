@@ -70,6 +70,7 @@ var FileGetter = (function () {
                             });
                             event = document.createEvent("MouseEvents");
 
+                            event.__getFile = true;
                             event.initEvent("click", true, true);
                             element.dispatchEvent(event);
 

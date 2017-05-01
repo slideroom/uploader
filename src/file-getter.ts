@@ -20,6 +20,7 @@ export class FileGetter {
     const returnPromise = new Promise<PendingFile[]>((res) => resolver = res);
 
     const event = document.createEvent("MouseEvents");
+    (<any>event).__getFile = true;
     event.initEvent("click", true, true);
     element.dispatchEvent(event);
 
