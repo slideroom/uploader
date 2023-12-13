@@ -31,7 +31,7 @@ var __awaiter = undefined && undefined.__awaiter || function (thisArg, _argument
                 resolve(result.value);
             }).then(fulfilled, rejected);
         }
-        step((generator = generator.apply(thisArg, _arguments)).next());
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
 
@@ -150,10 +150,13 @@ var FileUploader = (function () {
                                 rejecter(ev);
                             };
                             xhr.open("PUT", file.uploadUrl, true);
+                            if (!file.file.type) {
+                                xhr.setRequestHeader("Content-Type", file.contentType);
+                            }
                             xhr.send(file.file);
                             return context$3$0.abrupt("return", returnPromise);
 
-                        case 14:
+                        case 15:
                         case "end":
                             return context$3$0.stop();
                     }
