@@ -70,6 +70,11 @@ export class FileUploader {
     };
 
     xhr.open("PUT", file.uploadUrl, true);
+
+    if(!file.file.type) {
+      xhr.setRequestHeader("Content-Type", file.contentType);
+    }
+
     xhr.send(file.file);
 
     return returnPromise;

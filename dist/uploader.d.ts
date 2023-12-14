@@ -20,15 +20,15 @@ declare module 'uploader/file-uploader' {
 	    private uploading;
 	    private pendingQueue;
 	    queue(file: PendingFile | PendingFile[]): void;
-	    private startNext();
-	    private uploadFile(file);
+	    private startNext;
+	    private uploadFile;
 	}
 
 }
 declare module 'uploader/file-getter' {
 	import { PendingFile } from 'uploader/pending-file';
 	export class FileGetter {
-	    private createElement(multiple?);
+	    private createElement;
 	    getFiles(multiple?: boolean): Promise<PendingFile[]>;
 	}
 
