@@ -71,7 +71,7 @@ export class FileUploader {
 
     xhr.open("PUT", file.uploadUrl, true);
 
-    if(!file.file.type) {
+    if (file.contentType) {
       xhr.setRequestHeader("Content-Type", file.contentType);
     }
 
