@@ -150,7 +150,7 @@ var FileUploader = (function () {
                                 rejecter(ev);
                             };
                             xhr.open("PUT", file.uploadUrl, true);
-                            if (!file.file.type) {
+                            if (file.contentType) {
                                 xhr.setRequestHeader("Content-Type", file.contentType);
                             }
                             xhr.send(file.file);
